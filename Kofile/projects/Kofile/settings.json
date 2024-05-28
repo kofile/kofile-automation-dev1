@@ -1,0 +1,5 @@
+// Settings defined here will override global settings
+{
+    "chromedriver_path": "./drivers/chromedriver*",
+    "edgedriver_path": "./drivers/MicrosoftWebDriver*"
+}

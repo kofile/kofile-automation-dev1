@@ -1,0 +1,2 @@
+OIT,orderheader,print_message,email,email_message
+Copies,guest,Duplicate Receipt printing is initiated.,testmail@test.com,Email sent successfully

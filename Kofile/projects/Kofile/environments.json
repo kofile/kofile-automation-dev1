@@ -1,0 +1,233 @@
+{
+  "qa_48999_loc_2": {
+    "code": "48999",
+    "location": {"id": 2, "name": "county clerk office"},
+    "config_name": "county_clerk_office",
+    "scanned_id": 12,
+    "domain": "crs.qa-1.kofile.systems",
+    "config_import_path": "projects.Kofile.testdata",
+    "url": "http://%s:%s@10.11.36.112:8001/%s/?ReturnUrl=http://crs.qa-1.kofile.systems/%s/Account/ReturnClaim&amp;Referrer=",
+    "search_url": "http://%s:%s@10.11.36.112:8001/%s/?ReturnUrl=http://{mode}.qa-1.kofile.systems/%s/Security/ReturnClaim?clerkMode={is_clerk}",
+    "portal": "http://%s:%s@10.11.36.112:8001/%s/?ReturnUrl=http://portal.qa-1.kofile.systems/%s/",
+    "erProxy": "http://erproxy.qa-1.kofile.systems/%s",
+    "user":["User1","User4","User5","User6"],
+    "user_first": ["User1","user4","user5","user6"],
+    "user_last": ["User1","user4","user5","user6"],
+    "drawer": {"type": "user", "init_popup": false, "init_same_day_popup": false},
+    "password": ["Automation_1_24","Automation_4_23","Automation_5_12","Automation_6_10"],
+    "email_user": "tumovas@gmail.com",
+    "guest_user": "nel",
+    "kiosk_user_email": "vimmelluqe-3279@yopmail.com",
+    "kiosk_user_password": "00000",
+    "azure": {
+      "account_name": "vgdevimages",
+      "account_key": "VyTBoC6Fq2RAT/L3GARPnle2ALkD1SJjexb2N5gqasK+7px2hfddhAI/yMEyXPnluok+1DvAMHxFSlayIXu8Xg=="},
+    "project_db": {
+      "database": "VANGUARD_TX_QA",
+      "driver": "{SQL Server}",
+      "user": "qa1",
+      "password": "deadbeef",
+      "server": "10.0.0.7"
+    },
+    "printer_id": 108,
+    "device_service_path": "C:\\QA_Test\\CRS_Agent_QA_48999"
+  },
+
+  "qa_48999_loc_6": {
+    "code": "48999",
+    "location": {"id": 6, "name": "cuyahoga county"},
+    "config_name": "cuyahoga_county",
+    "scanned_id": 12,
+    "domain": "crs.qa-1.kofile.systems",
+    "config_import_path": "projects.Kofile.testdata",
+    "url": "http://%s:%s@10.11.36.112:8001/%s/?ReturnUrl=http://crs.qa-1.kofile.systems/%s/Account/ReturnClaim&amp;Referrer=",
+    "search_url": "http://%s:%s@10.11.36.112:8001/%s/?ReturnUrl=http://{mode}.qa-1.kofile.systems/%s/Security/ReturnClaim?clerkMode={is_clerk}",
+    "portal": "http://%s:%s@10.11.36.112:8001/%s/?ReturnUrl=http://portal.qa-1.kofile.systems/%s/",
+    "erProxy": "http://erproxy.qa-1.kofile.systems/%s",
+    "user":["User1","User4","User5","User6"],
+    "user_first": ["User1","user4","user5","user6"],
+    "user_last": ["User1","user4","user5","user6"],
+    "drawer": {"type": "user", "init_popup": false, "init_same_day_popup": false},
+    "password": ["Automation_1_24","Automation_4_23","Automation_5_12","Automation_6_10"],
+    "email_user": "tumovas@gmail.com",
+    "guest_user": "nel",
+    "kiosk_user_email": "vimmelluqe-3279@yopmail.com",
+    "kiosk_user_password": "00000",
+    "azure": {
+      "account_name": "vgdevimages",
+      "account_key": "VyTBoC6Fq2RAT/L3GARPnle2ALkD1SJjexb2N5gqasK+7px2hfddhAI/yMEyXPnluok+1DvAMHxFSlayIXu8Xg=="},
+    "project_db": {
+      "database": "VANGUARD_TX_QA",
+      "driver": "{SQL Server}",
+      "user": "qa1",
+      "password": "deadbeef",
+      "server": "10.0.0.7"
+    },
+    "printer_id": 110,
+    "device_service_path": "C:\\QA_Test\\CRS_Agent_QA_48999"
+  },
+
+  "uat_48999_loc_2": {
+    "code": "48999",
+    "location": {"id": 2, "name": "county clerk office"},
+    "config_name": "county_clerk_office",
+    "scanned_id": 93,
+    "domain": "crs.uat-1.kofile.systems",
+    "config_import_path": "projects.Kofile.testdata",
+    "url": "http://%s:%s@10.11.36.112:8001/%s/?ReturnUrl=http://crs.uat-1.kofile.systems/%s/Account/ReturnClaim&amp;Referrer=",
+    "search_url": "http://%s:%s@10.11.36.112:8001/%s/?ReturnUrl=http://{mode}.uat-1.kofile.systems/%s/Security/ReturnClaim?clerkMode={is_clerk}",
+    "portal": "http://%s:%s@10.11.36.112:8001/%s/?ReturnUrl=http://portal.uat-1.kofile.systems/%s/",
+    "erProxy": "http://erproxy.uat-1.kofile.systems/%s",
+    "user": ["User1","User4","User5","User6"],
+    "user_first": ["User1","user4","user5","user6"],
+    "user_last": ["User1","user4","user5","user6"],
+    "drawer": {"type": "user", "init_popup": false, "init_same_day_popup": false},
+    "password": ["Automation_1_24","Automation_4_23","Automation_5_12","Automation_6_10"],
+    "email_user": "tumovas@gmail.com",
+    "guest_user": "nel",
+    "kiosk_user_email": "vimmelluqe-3279@yopmail.com",
+    "kiosk_user_password": "00000",
+    "azure": {
+      "account_name": "vgtestcontent",
+      "account_key": "NhoF3Wr1cksGOFZ0nMJ3R/qPauW122FDiQ197kTW+iqurRSyO36F8ZA8/LHvK0AkgDcrfP04RQy0AqB/iLCVfg=="
+    },
+    "project_db": {
+      "database": "VANGUARD_TX_PRE",
+      "driver": "{SQL Server}",
+      "user": "uat1",
+      "password": "deadbeef",
+      "server": "10.0.0.7"
+    },
+    "printer_id": 250,
+    "device_service_path": "C:\\QA_Test\\CRS_Agent_UAT_48999"
+  },
+
+  "uat_48999_loc_6": {
+    "code": "48999",
+    "location": {"id": 6, "name": "cuyahoga county"},
+    "config_name": "county_clerk_office",
+    "scanned_id": 93,
+    "domain": "crs.uat-1.kofile.systems",
+    "config_import_path": "projects.Kofile.testdata",
+    "url": "http://%s:%s@10.11.36.112:8001/%s/?ReturnUrl=http://crs.uat-1.kofile.systems/%s/Account/ReturnClaim&amp;Referrer=",
+    "search_url": "http://%s:%s@10.11.36.112:8001/%s/?ReturnUrl=http://{mode}.uat-1.kofile.systems/%s/Security/ReturnClaim?clerkMode={is_clerk}",
+    "portal": "http://%s:%s@10.11.36.112:8001/%s/?ReturnUrl=http://portal.uat-1.kofile.systems/%s/",
+    "erProxy": "http://erproxy.uat-1.kofile.systems/%s",
+    "user": ["User1","User4","User5","User6"],
+    "user_first": ["User1","user4","user5","user6"],
+    "user_last": ["User1","user4","user5","user6"],
+    "drawer": {"type": "user", "init_popup": false, "init_same_day_popup": false},
+    "password": ["Automation_1_24","Automation_4_23","Automation_5_12","Automation_6_10"],
+    "email_user": "tumovas@gmail.com",
+    "guest_user": "nel",
+    "kiosk_user_email": "vimmelluqe-3279@yopmail.com",
+    "kiosk_user_password": "00000",
+    "azure": {
+      "account_name": "vgtestcontent",
+      "account_key": "NhoF3Wr1cksGOFZ0nMJ3R/qPauW122FDiQ197kTW+iqurRSyO36F8ZA8/LHvK0AkgDcrfP04RQy0AqB/iLCVfg=="
+    },
+    "project_db": {
+      "database": "VANGUARD_TX_PRE",
+      "driver": "{SQL Server}",
+      "user": "uat1",
+      "password": "deadbeef",
+      "server": "10.0.0.7"
+    },
+    "printer_id": 250,
+    "device_service_path": "C:\\QA_Test\\CRS_Agent_UAT_48999"
+  },
+
+
+  "qa_ref": {
+    "code": "48000",
+    "config_name": "texas_reference",
+    "scanned_id": 67,
+    "domain": "crs.qa-1.kofile.systems",
+    "config_import_path": "projects.Kofile.testdata",
+    "url": "http://%s:%s@10.11.36.112:8001/%s/?ReturnUrl=http://crs.qa-1.kofile.systems/%s/Account/ReturnClaim&amp;Referrer=",
+    "search_url": "http://%s:%s@10.11.36.112:8001/%s/?ReturnUrl=http://{mode}.qa-1.kofile.systems/%s/Security/ReturnClaim?clerkMode={is_clerk}",
+    "portal": "http://%s:%s@10.11.36.112:8001/%s/?ReturnUrl=http://portal.qa-1.kofile.systems/%s/",
+    "erProxy": "http://erproxy.qa-1.kofile.systems/%s",
+    "user":["User1","User4","User5","User6"],
+    "user_first": ["User1","User4","User5","user6"],
+    "user_last": ["User1","User4","User5","user6"],
+    "drawer": {"type": "workstation", "init_popup": false, "init_same_day_popup": false},
+    "drawer_id": [2996, 2948, 2954, 3048],
+    "password": ["Automation_1_24","Automation_4_23","Automation_5_12","Automation_6_10"],
+    "email_user": "tumovas@gmail.com",
+    "guest_user": "nel",
+    "kiosk_user_email": "vimmelluqe-3279@yopmail.com",
+    "kiosk_user_password": "00000",
+    "azure": {
+      "account_name": "vgdevimages",
+      "account_key": "VyTBoC6Fq2RAT/L3GARPnle2ALkD1SJjexb2N5gqasK+7px2hfddhAI/yMEyXPnluok+1DvAMHxFSlayIXu8Xg=="},
+    "project_db": {
+      "database": "VANGUARD_TX_QA",
+      "driver": "{SQL Server}",
+      "user": "qa1",
+      "password": "deadbeef",
+      "server": "10.0.0.7"
+    },
+    "printer_id": 3055,
+    "device_service_path": "C:\\QA_Test\\CRS_Agent_QA_48000"
+  },
+
+  "uat_ref": {
+    "code": "48000",
+    "config_name": "texas_reference",
+    "scanned_id": 146,
+    "domain": "crs.uat-1.kofile.systems",
+    "config_import_path": "projects.Kofile.testdata",
+    "url": "http://%s:%s@10.11.36.112:8001/%s/?ReturnUrl=http://crs.uat-1.kofile.systems/%s/Account/ReturnClaim&amp;Referrer=",
+    "search_url": "http://%s:%s@10.11.36.112:8001/%s/?ReturnUrl=http://{mode}.uat-1.kofile.systems/%s/Security/ReturnClaim?clerkMode={is_clerk}",
+    "portal": "http://%s:%s@10.11.36.112:8001/%s/?ReturnUrl=http://portal.uat-1.kofile.systems/%s/",
+    "erProxy": "http://erproxy.uat-1.kofile.systems/%s",
+    "user":["User1","User4","User5", "User6"],
+    "user_first": ["User1","user4","user5", "user6"],
+    "user_last": ["User1","user4","user5", "user6"],
+    "drawer": {"type": "workstation", "init_popup": false, "init_same_day_popup": false},
+    "drawer_id": [615,615,615,615],
+    "password": ["Automation_1_24","Automation_4_23","Automation_5_12","Automation_6_10"],
+    "email_user": "tumovas@gmail.com",
+    "guest_user": "nel",
+    "kiosk_user_email": "vimmelluqe-3279@yopmail.com",
+    "kiosk_user_password": "00000",
+    "azure": {
+      "account_name": "vgtestcontent",
+      "account_key": "NhoF3Wr1cksGOFZ0nMJ3R/qPauW122FDiQ197kTW+iqurRSyO36F8ZA8/LHvK0AkgDcrfP04RQy0AqB/iLCVfg=="},
+    "project_db": {
+      "database": "VANGUARD_TX_PRE",
+      "driver": "{SQL Server}",
+      "user": "uat1",
+      "password": "deadbeef",
+      "server": "10.0.0.7"
+    },
+    "printer_id": 616,
+    "device_service_path": "C:\\QA_Test\\CRS_Agent_UAT_48000"
+  },
+
+
+  "prod_ref": {
+    "code": "48000",
+    "scanned_id": 69,
+    "domain": "crs.prod1.kofile.com",
+    "portal_domain": "portal.prod1.kofile.com",
+    "cs_domain": "clerksearch.prod1.kofile.com",
+    "url": "http://%s:%s@10.11.36.112:8001/%s/?ReturnUrl=https://crs.prod1.kofile.com/%s/Account/ReturnClaim&Referrer=",
+    "user":["User1"],
+    "user_first": ["User1"],
+    "user_last": ["User1"],
+    "password": ["Automation_1_24"],
+    "email_user": "tumovas@gmail.com",
+    "config_name": "texas_reference",
+    "config_import_path": "projects.Kofile.testdata",
+    "search_url": "http://%s:%s@10.11.36.112:8001/%s/?ReturnUrl=https://{mode}.prod1.kofile.com/%s/Security/ReturnClaim?clerkMode={is_clerk}",
+    "portal": "http://%s:%s@10.11.36.112:8001/%s/?ReturnUrl=http://portal.prod1.kofile.com/%s/",
+    "erProxy": "http://erproxy.prod1.kofile.com/%s",
+    "guest_user": "nel",
+    "api_params": {
+      "api_auth_type": "browser",
+      "parcel_id": "2"
+    }
+  }
+}

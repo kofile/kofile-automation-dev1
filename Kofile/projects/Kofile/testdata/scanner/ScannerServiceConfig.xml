@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration>
+  <Client>
+    <AgentName>ScanService</AgentName>
+  </Client>
+  <Server>
+    <BaseAddress>http://crs.qa-1.kofile.systems/48999/capturemodule/api</BaseAddress>
+    <SamlCertificatePath>CSO.pfx</SamlCertificatePath>
+    <SamlPassword>vanguard</SamlPassword>
+    <SamlTokenValidationTimeOut>25</SamlTokenValidationTimeOut>
+    <SamlTokenMaxTimeDifference>5</SamlTokenMaxTimeDifference>
+  </Server>
+</ServiceConfiguration>

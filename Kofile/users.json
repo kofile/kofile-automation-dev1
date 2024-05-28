@@ -1,0 +1,20 @@
+[
+    {
+        "id": "6145f63f",
+        "username": "admin",
+        "password": "pbkdf2:sha256:150000$H4nBUOY3$326443c86a04e4e2bfc99284eb0c5bafad4bc7d58b61c59f9f0c4e6c2feaa40b",
+        "email": null,
+        "is_superuser": true,
+        "projects": {}
+    },
+    {
+        "id": "14579197",
+        "username": "kofile",
+        "password": "pbkdf2:sha256:150000$n0QjsLtL$e5a6cc09ed3c869dfb5708200eea07fd59ea47dcf306533b3bcd19272ada0eee",
+        "email": null,
+        "is_superuser": true,
+        "projects": {
+            "Kofile": "admin"
+        }
+    }
+]

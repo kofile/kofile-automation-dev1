@@ -1,0 +1,2 @@
+Here is a link to download and install pymssql package
+https://docs.microsoft.com/en-us/sql/connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development?view=sql-server-ver15

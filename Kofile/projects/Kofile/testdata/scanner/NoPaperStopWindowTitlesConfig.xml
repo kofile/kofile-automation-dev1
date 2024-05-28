@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<NoPaperStopWindowTitlesConfig>
+  <Windows>
+    <Window>
+      <Title>PaperStream IP</Title>
+      <Buttons>
+        <Button>Cancel</Button>
+      </Buttons>
+    </Window>
+    <Window>
+      <Title>TWAIN driver</Title>
+      <Buttons>
+        <Button>Cancel</Button>
+      </Buttons>
+    </Window>
+  </Windows>
+</NoPaperStopWindowTitlesConfig>

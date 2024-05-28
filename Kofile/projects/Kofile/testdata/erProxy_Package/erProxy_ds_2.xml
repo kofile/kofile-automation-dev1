@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<REQUEST_GROUP PRIAVersionIdentifier="2.4.1">
+
+  <SUBMITTING_PARTY _City="Provo" _Name="955955" _PostalCode="84604" _State="UT"
+                    _StreetAddress="4844 North 300 West" _StreetAddress2="Suite 202">
+  </SUBMITTING_PARTY>
+
+  <REQUEST RequestDateTime="2009-04-09T14:33:21">
+    <PRIA_REQUEST>
+      <PACKAGE _Identifier="1000029"  _ReturnByEmail="Y">
+      <!--Return by Mail = Y makes er_proxy a DS, N - regular-->
+
+
+        <PRIA_DOCUMENT DocumentNonRecordableIndicator="N" RecordableDocumentType="DEED - AFFIDAVIT"
+                       RecordableDocumentTypeOtherDescription="DEED - AFFIDAVIT" _Code="DEED - AFFIDAVIT">
+
+          <GRANTOR MaritalStatusType="Married" NonPersonEntityIndicator="N" _CapacityDescription=""
+                   _FirstName="John" _LastName="Doe" _MiddleName="" _NameSuffix="JR" _UnparsedName="John Doe JR">
+          </GRANTOR>
+
+          <GRANTEE MaritalStatusType="Married" NonPersonEntityIndicator="N" _CapacityDescription=""
+                   _FirstName="Jane" _LastName="Doe" _MiddleName="" _NameSuffix="" _UnparsedName="Jane Doe">
+          </GRANTEE>
+
+          <PROPERTY BuildingStatusType="" LandUseComment="" LandUseType=""
+                    LandUseTypeOtherDescription="" _City="Provo" _Country="USA" _County="Utah" _PostalCode="84604"
+                    _State="UT" _StreetAddress="123 Sample Street" _StreetAddress2="Apt. 2">
+            <_IDENTIFICATION AssessorsParcelIdentifier="55555" CountyFIPSCode="49"
+                             MunicipalityName="Provo" SchoolDistrictName="Alpine" StateFIPSCode="49" />
+          </PROPERTY>
+
+          <PARTIES>
+            <_RETURN_TO_PARTY NonPersonEntityIndicator="Y" _City="Provo" _County="Utah"
+                              _PostalCode="84604" _State="UT" _StreetAddress="4844 North 300 West"
+                              _StreetAddress2="Suite 202"
+                              _TitleDescription="" _UnparsedName="Sample Title Company">
+            </_RETURN_TO_PARTY>
+            <_PREPARED_BY_PARTY NonPersonEntityIndicator="Y" _City="Provo" _County="Utah"
+                                _PostalCode="84604" _State="UT" _StreetAddress="4844 North 300 West"
+                                _StreetAddress2="Suite 202"
+                                _TitleDescription="" _UnparsedName="Sample Title Company">
+            </_PREPARED_BY_PARTY>
+          </PARTIES>
+
+          <EXECUTION _City="Provo" _County="Utah" _Date="2009-04-09" _State="UT" />
+          <MORTGAGE_CONSIDERATION HELOCInitialAdvanceAmount="" OriginalLoanAmount="101000" />
+          <CONSIDERATION _Amount="80000" _Type="SalePrice" _TypeOtherDescription="" />
+          <RECORDABLE_DOCUMENT>
+            <_ASSOCIATED_DOCUMENT _BookNumber="564" _BookType="" _BookTypeOtherDescription=""
+                                  _Code="" _CountyOfRecordationName="Utah" _InstrumentNumber="123456789" _Number=""
+                                  _OfficeOfRecordationName="Clerk" _PageNumber="798"
+                                  _RecordingDate="2009-04-09T14:33:21"
+                                  _RecordingJurisdictionName="" _StateOfRecordationName="UT" _Title="" _Type="DEED"
+                                  _TypeOtherDescription="" _VolumeNumber="" />
+          </RECORDABLE_DOCUMENT>
+
+          <EMBEDDED_FILE EmbeddedFileName="embfile.tif" EmbeddedFileType="TIFF" EmbeddedFileVersion=""
+                         FileDescription="Deed" FileEncodingType="base64" ID="" MIMEType="image/tiff">
+            <DOCUMENT>{0}</DOCUMENT>
+          </EMBEDDED_FILE>
+
+        </PRIA_DOCUMENT>
+
+        <PRIA_DOCUMENT DocumentNonRecordableIndicator="N" RecordableDocumentType="DEED - AFFIDAVIT"
+                       RecordableDocumentTypeOtherDescription="DEED - AFFIDAVIT" _Code="DEED - AFFIDAVIT">
+
+          <GRANTOR MaritalStatusType="Married" NonPersonEntityIndicator="N" _CapacityDescription=""
+                   _FirstName="James" _LastName="Smith" _MiddleName="" _NameSuffix="JR" _UnparsedName="James Smith">
+          </GRANTOR>
+
+          <GRANTEE MaritalStatusType="Married" NonPersonEntityIndicator="N" _CapacityDescription=""
+                   _FirstName="Mary" _LastName="Smith" _MiddleName="" _NameSuffix="" _UnparsedName="Mary Smith">
+          </GRANTEE>
+
+          <PROPERTY BuildingStatusType="" LandUseComment="" LandUseType=""
+                    LandUseTypeOtherDescription="" _City="Provo" _Country="USA" _County="Utah" _PostalCode="84604"
+                    _State="UT" _StreetAddress="123 Sample Street" _StreetAddress2="Apt. 2">
+            <_IDENTIFICATION AssessorsParcelIdentifier="55555" CountyFIPSCode="49"
+                             MunicipalityName="Provo" SchoolDistrictName="Alpine" StateFIPSCode="49" />
+          </PROPERTY>
+
+          <PARTIES>
+            <_RETURN_TO_PARTY NonPersonEntityIndicator="Y" _City="Provo" _County="Utah"
+                              _PostalCode="84604" _State="UT" _StreetAddress="4844 North 300 West"
+                              _StreetAddress2="Suite 202"
+                              _TitleDescription="" _UnparsedName="Sample Title Company">
+            </_RETURN_TO_PARTY>
+            <_PREPARED_BY_PARTY NonPersonEntityIndicator="Y" _City="Provo" _County="Utah"
+                                _PostalCode="84604" _State="UT" _StreetAddress="4844 North 300 West"
+                                _StreetAddress2="Suite 202"
+                                _TitleDescription="" _UnparsedName="Sample Title Company">
+            </_PREPARED_BY_PARTY>
+          </PARTIES>
+
+          <EXECUTION _City="Provo" _County="Utah" _Date="2009-04-09" _State="UT" />
+          <MORTGAGE_CONSIDERATION HELOCInitialAdvanceAmount="" OriginalLoanAmount="101000" />
+          <CONSIDERATION _Amount="80000" _Type="SalePrice" _TypeOtherDescription="" />
+          <RECORDABLE_DOCUMENT>
+            <_ASSOCIATED_DOCUMENT _BookNumber="564" _BookType="" _BookTypeOtherDescription=""
+                                  _Code="" _CountyOfRecordationName="Utah" _InstrumentNumber="123456789" _Number=""
+                                  _OfficeOfRecordationName="Clerk" _PageNumber="798"
+                                  _RecordingDate="2009-04-09T14:33:21"
+                                  _RecordingJurisdictionName="" _StateOfRecordationName="UT" _Title="" _Type="DEED"
+                                  _TypeOtherDescription="" _VolumeNumber="" />
+          </RECORDABLE_DOCUMENT>
+
+          <EMBEDDED_FILE EmbeddedFileName="embfile.tif" EmbeddedFileType="TIFF" EmbeddedFileVersion=""
+                         FileDescription="Deed" FileEncodingType="base64" ID="" MIMEType="image/tiff">
+            <DOCUMENT>{0}</DOCUMENT>
+          </EMBEDDED_FILE>
+
+        </PRIA_DOCUMENT>
+
+
+      </PACKAGE>
+    </PRIA_REQUEST>
+  </REQUEST>
+</REQUEST_GROUP>

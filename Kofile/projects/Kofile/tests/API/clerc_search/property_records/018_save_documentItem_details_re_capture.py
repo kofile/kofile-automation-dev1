@@ -1,0 +1,536 @@
+from projects.Kofile.Lib.test_parent import ApiTestParent
+from runner import run_test
+
+description = """
+"""
+
+tags = ['API']
+
+
+class test(ApiTestParent):  # noqa
+    def __init__(self, data):
+        super(test, self).__init__(data, __name__)
+
+    @property
+    def post_data(self):
+        data = self.api_test_data.save_document_item_details_data.copy()
+        data["documentItem"]["DocumentId"] = self.get("re_capture_document_id")
+        data["documentItem"]["Year"] = self.get("re_capture_order_year")
+        data["documentItem"]["Scanned"] = int(self.get("re_capture_scanned")) + self.api_test_data.pages
+        data["documentItem"]["ScanDate"] = self.get("re_capture_scan_date")
+        data["documentItem"]["Path"] = self.get("re_capture_azure_file_path")
+        data["documentItem"]["ScanTaskId"] = self.get("re_capture_scan_task_id")
+        data["documentItem"]["RecordedYear"] = self.get("re_capture_recorded_year")
+        data["DocumentId"] = self.get("re_capture_document_id")
+        data["DocumentGroup"]["Id"] = self.get("re_capture_doc_group")["Id"]
+        data["DocumentGroup"]["Name"] = self.get("re_capture_doc_group")["Name"]
+        data["DocumentType"]["Key"] = self.get("re_capture_doc_type")["Key"]
+        data["DocumentType"]["Value"] = self.get("re_capture_doc_type")["Value"]
+        data["OrderNumber"] = self.get("cs_re_capture_order_number")
+        data["Number"] = self.get("re_capture_doc_number")
+        data["Year"] = self.get("re_capture_order_year")
+        data["Pages"] = int(self.get("re_capture_scanned")) + self.api_test_data.pages
+        data["Scanned"] = int(self.get("re_capture_scanned")) + self.api_test_data.pages
+        data["Path"] = self.get("re_capture_azure_file_path")
+        data["ScanDate"] = self.get("re_capture_scan_date")
+        data["ScanTaskId"] = self.get("re_capture_scan_task_id")
+        return data
+
+    @property
+    def params(self):
+        return {
+            'isReprocessing': 'False',
+            'isReCapture': 'False',
+            'isAdminSuspend': 'False',
+            'isCaptureReview': 'False',
+            'isUpload': 'False',
+        }
+
+    @property
+    def schema(self):
+        return {
+            "definitions": {},
+            "title": "Root",
+            "type": "object",
+            "required": [
+                "updatedDocument",
+                "documentIdsToRemove"
+            ],
+            "properties": {
+                "updatedDocument": {
+                    "$id": "#root/updatedDocument",
+                    "title": "Updateddocument",
+                    "type": "object",
+                    "required": [
+                        "DocumentGroup",
+                        "DocumentId",
+                        "OrderId",
+                        "OrderItemId",
+                        "OrderItemTypeId",
+                        "OrderItemTypeName",
+                        "OrderNumber",
+                        "Sequence",
+                        "Number",
+                        "ApplicationNumber",
+                        "Year",
+                        "DocumentType",
+                        "OrderItemTypeIdIsAllowed",
+                        "Book",
+                        "Pages",
+                        "Scanned",
+                        "ScanDate",
+                        "Status",
+                        "Path",
+                        "Content",
+                        "SeparationType",
+                        "ScanTaskId",
+                        "IsNewOrderDocument",
+                        "NeedToUpdatePath",
+                        "ReprocessingReason",
+                        "ReprocessingRemarks",
+                        "IsDocumentMapped",
+                        "IsOnRecaptureOrCanceled",
+                        "RelativePathKind",
+                        "Document",
+                        "CaptureAndIndexAvailable",
+                        "IsPurgeAvaliable",
+                        "FileSize",
+                        "RecordedYear",
+                        "pageList",
+                        "IsUploadable",
+                        "HasOrderItemWithPriorStep",
+                        "RecaptureAttachmentName",
+                        "IsHistoricalDocumentForCapture",
+                        "HasSystemAttachmentForCapture",
+                        "Suffix"
+                    ],
+                    "properties": {
+                        "DocumentGroup": {
+                            "$id": "#root/updatedDocument/DocumentGroup",
+                            "title": "Documentgroup",
+                            "type": "object",
+                            "required": [
+                                "Id",
+                                "Code",
+                                "Name",
+                                "InternetAttachmentsAccess",
+                                "IntranetAttachmentsAccess",
+                                "ConfigId",
+                                "IsAutoGenerated",
+                                "IsConsolidationEnabled"
+                            ],
+                            "properties": {
+                                "Id": {
+                                    "$id": "#root/updatedDocument/DocumentGroup/Id",
+                                    "title": "Id",
+                                    "type": "integer",
+                                    "enum": [self.get("re_capture_doc_group")["Id"]],
+                                    "default": 0
+                                },
+                                "Code": {
+                                    "$id": "#root/updatedDocument/DocumentGroup/Code",
+                                    "title": "Code",
+                                    "type": "null",
+                                    "default": None
+                                },
+                                "Name": {
+                                    "$id": "#root/updatedDocument/DocumentGroup/Name",
+                                    "title": "Name",
+                                    "type": "string",
+                                    "default": "",
+                                    "pattern": f'^{self.get("re_capture_doc_group")["Name"]}$'
+                                },
+                                "InternetAttachmentsAccess": {
+                                    "$id": "#root/updatedDocument/DocumentGroup/InternetAttachmentsAccess",
+                                    "title": "Internetattachmentsaccess",
+                                    "type": "boolean",
+                                    "examples": [
+                                        False
+                                    ],
+                                    "default": True
+                                },
+                                "IntranetAttachmentsAccess": {
+                                    "$id": "#root/updatedDocument/DocumentGroup/IntranetAttachmentsAccess",
+                                    "title": "Intranetattachmentsaccess",
+                                    "type": "boolean",
+                                    "examples": [
+                                        False
+                                    ],
+                                    "default": True
+                                },
+                                "ConfigId": {
+                                    "$id": "#root/updatedDocument/DocumentGroup/ConfigId",
+                                    "title": "Configid",
+                                    "type": "null",
+                                    "default": None
+                                },
+                                "IsAutoGenerated": {
+                                    "$id": "#root/updatedDocument/DocumentGroup/IsAutoGenerated",
+                                    "title": "Isautogenerated",
+                                    "type": "boolean",
+                                    "examples": [
+                                        True
+                                    ],
+                                    "default": True
+                                },
+                                "IsConsolidationEnabled": {
+                                    "$id": "#root/updatedDocument/DocumentGroup/IsConsolidationEnabled",
+                                    "title": "Isconsolidationenabled",
+                                    "type": "boolean",
+                                    "examples": [
+                                        False
+                                    ],
+                                    "default": True
+                                }
+                            }
+                        }
+                        ,
+                        "DocumentId": {
+                            "$id": "#root/updatedDocument/DocumentId",
+                            "title": "Documentid",
+                            "type": "integer",
+                            "enum": [self.get("re_capture_document_id")],
+                            "default": 0
+                        },
+                        "OrderId": {
+                            "$id": "#root/updatedDocument/OrderId",
+                            "title": "Orderid",
+                            "type": "integer",
+                            "enum": [self.get("re_capture_order_id")],
+                            "default": 0
+                        },
+                        "OrderItemId": {
+                            "$id": "#root/updatedDocument/OrderItemId",
+                            "title": "Orderitemid",
+                            "type": "integer",
+                            "enum": [self.get("re_capture_order_item_id")],
+                            "default": 0
+                        },
+                        "OrderItemTypeId": {
+                            "$id": "#root/updatedDocument/OrderItemTypeId",
+                            "title": "Orderitemtypeid",
+                            "type": "integer",
+                            "enum": [self.get("re_capture_order_item_type_id")],
+                            "default": 0
+                        },
+                        "OrderItemTypeName": {
+                            "$id": "#root/updatedDocument/OrderItemTypeName",
+                            "title": "Orderitemtypename",
+                            "type": "null",
+                            "default": None
+                        },
+                        "OrderNumber": {
+                            "$id": "#root/updatedDocument/OrderNumber",
+                            "title": "Ordernumber",
+                            "type": "string",
+                            "default": "",
+                            "pattern": f"^{self.get('cs_re_capture_order_number')}$"
+                        },
+                        "Sequence": {
+                            "$id": "#root/updatedDocument/Sequence",
+                            "title": "Sequence",
+                            "type": "integer",
+                            "examples": [
+                                1
+                            ],
+                            "default": 0
+                        },
+                        "Number": {
+                            "$id": "#root/updatedDocument/Number",
+                            "title": "Number",
+                            "type": "string",
+                            "default": "",
+                            "pattern": f"^{self.get('re_capture_doc_number')}$"
+                        },
+                        "ApplicationNumber": {
+                            "$id": "#root/updatedDocument/ApplicationNumber",
+                            "title": "Applicationnumber",
+                            "type": "null",
+                            "default": None
+                        },
+                        "Year": {
+                            "$id": "#root/updatedDocument/Year",
+                            "title": "Year",
+                            "type": "string",
+                            "default": "",
+                            "pattern": f"^{self.get('re_capture_order_year')}$"
+                        },
+                        "DocumentType": {
+                            "$id": "#root/updatedDocument/DocumentType",
+                            "title": "Documenttype",
+                            "type": "object",
+                            "required": [
+                                "Key",
+                                "Value"
+                            ],
+                            "properties": {
+                                "Key": {
+                                    "$id": "#root/updatedDocument/DocumentType/Key",
+                                    "title": "Key",
+                                    "type": "integer",
+                                    "enum": [self.get("re_capture_doc_type")["Key"]],
+                                    "default": 0
+                                },
+                                "Value": {
+                                    "$id": "#root/updatedDocument/DocumentType/Value",
+                                    "title": "Value",
+                                    "type": "string",
+                                    "default": "",
+                                    "pattern": f'^{self.get("re_capture_doc_type")["Value"]}$'
+                                }
+                            }
+                        }
+                        ,
+                        "OrderItemTypeIdIsAllowed": {
+                            "$id": "#root/updatedDocument/OrderItemTypeIdIsAllowed",
+                            "title": "Orderitemtypeidisallowed",
+                            "type": "boolean",
+                            "examples": [
+                                True
+                            ],
+                            "default": True
+                        },
+                        "Book": {
+                            "$id": "#root/updatedDocument/Book",
+                            "title": "Book",
+                            "type": "null",
+                            "default": None
+                        },
+                        "Pages": {
+                            "$id": "#root/updatedDocument/Pages",
+                            "title": "Pages",
+                            "type": "integer",
+                            "enum": [int(self.get("re_capture_scanned")) + self.api_test_data.pages],
+                            "default": 0
+                        },
+                        "Scanned": {
+                            "$id": "#root/updatedDocument/Scanned",
+                            "title": "Scanned",
+                            "type": "integer",
+                            "enum": [int(self.get("re_capture_scanned")) + self.api_test_data.pages],
+                            "default": 0
+                        },
+                        "ScanDate": {
+                            "$id": "#root/updatedDocument/ScanDate",
+                            "title": "Scandate",
+                            "type": "string",
+                            "default": "",
+                            "pattern": f"^{self.get('re_capture_scan_date')}$"
+                        },
+                        "Status": {
+                            "$id": "#root/updatedDocument/Status",
+                            "title": "Status",
+                            "type": "string",
+                            "default": "",
+                            "examples": [
+                                "Scanned"
+                            ],
+                            "pattern": "^.*$"
+                        },
+                        "Path": {
+                            "$id": "#root/updatedDocument/Path",
+                            "title": "Path",
+                            "type": "string",
+                            "default": "",
+                            "pattern": f"^{self.get('re_capture_azure_file_path')}$"
+                        },
+                        "Content": {
+                            "$id": "#root/updatedDocument/Content",
+                            "title": "Content",
+                            "type": "null",
+                            "default": None
+                        },
+                        "SeparationType": {
+                            "$id": "#root/updatedDocument/SeparationType",
+                            "title": "Separationtype",
+                            "type": "integer",
+                            "examples": [
+                                1
+                            ],
+                            "default": 0
+                        },
+                        "ScanTaskId": {
+                            "$id": "#root/updatedDocument/ScanTaskId",
+                            "title": "Scantaskid",
+                            "type": "integer",
+                            "enum": [self.get("re_capture_scan_task_id")],
+                            "default": 0
+                        },
+                        "IsNewOrderDocument": {
+                            "$id": "#root/updatedDocument/IsNewOrderDocument",
+                            "title": "Isneworderdocument",
+                            "type": "boolean",
+                            "examples": [
+                                False
+                            ],
+                            "default": True
+                        },
+                        "NeedToUpdatePath": {
+                            "$id": "#root/updatedDocument/NeedToUpdatePath",
+                            "title": "Needtoupdatepath",
+                            "type": "boolean",
+                            "examples": [
+                                True
+                            ],
+                            "default": True
+                        },
+                        "ReprocessingReason": {
+                            "$id": "#root/updatedDocument/ReprocessingReason",
+                            "title": "Reprocessingreason",
+                            "type": "null",
+                            "default": None
+                        },
+                        "ReprocessingRemarks": {
+                            "$id": "#root/updatedDocument/ReprocessingRemarks",
+                            "title": "Reprocessingremarks",
+                            "type": "null",
+                            "default": None
+                        },
+                        "IsDocumentMapped": {
+                            "$id": "#root/updatedDocument/IsDocumentMapped",
+                            "title": "Isdocumentmapped",
+                            "type": "boolean",
+                            "examples": [
+                                False
+                            ],
+                            "default": True
+                        },
+                        "IsOnRecaptureOrCanceled": {
+                            "$id": "#root/updatedDocument/IsOnRecaptureOrCanceled",
+                            "title": "Isonrecaptureorcanceled",
+                            "type": "boolean",
+                            "examples": [
+                                False
+                            ],
+                            "default": True
+                        },
+                        "RelativePathKind": {
+                            "$id": "#root/updatedDocument/RelativePathKind",
+                            "title": "Relativepathkind",
+                            "type": "null",
+                            "default": None
+                        },
+                        "Document": {
+                            "$id": "#root/updatedDocument/Document",
+                            "title": "Document",
+                            "type": "null",
+                            "default": None
+                        },
+                        "CaptureAndIndexAvailable": {
+                            "$id": "#root/updatedDocument/CaptureAndIndexAvailable",
+                            "title": "Captureandindexavailable",
+                            "type": "boolean",
+                            "examples": [
+                                False
+                            ],
+                            "default": True
+                        },
+                        "IsPurgeAvaliable": {
+                            "$id": "#root/updatedDocument/IsPurgeAvaliable",
+                            "title": "Ispurgeavaliable",
+                            "type": "boolean",
+                            "examples": [
+                                False
+                            ],
+                            "default": True
+                        },
+                        "FileSize": {
+                            "$id": "#root/updatedDocument/FileSize",
+                            "title": "Filesize",
+                            "type": "integer",
+                            "examples": [
+                                0
+                            ],
+                            "default": 0
+                        },
+                        "RecordedYear": {
+                            "$id": "#root/updatedDocument/RecordedYear",
+                            "title": "Recordedyear",
+                            "type": "string",
+                            "default": "",
+                            "pattern": f"^{self.get('re_capture_recorded_year')}$"
+                        },
+                        "pageList": {
+                            "$id": "#root/updatedDocument/pageList",
+                            "title": "Pagelist",
+                            "type": "null",
+                            "default": None
+                        },
+                        "IsUploadable": {
+                            "$id": "#root/updatedDocument/IsUploadable",
+                            "title": "Isuploadable",
+                            "type": "boolean",
+                            "examples": [
+                                False
+                            ],
+                            "default": True
+                        },
+                        "HasOrderItemWithPriorStep": {
+                            "$id": "#root/updatedDocument/HasOrderItemWithPriorStep",
+                            "title": "Hasorderitemwithpriorstep",
+                            "type": "boolean",
+                            "examples": [
+                                False
+                            ],
+                            "default": True
+                        },
+                        "RecaptureAttachmentName": {
+                            "$id": "#root/updatedDocument/RecaptureAttachmentName",
+                            "title": "Recaptureattachmentname",
+                            "type": "null",
+                            "default": None
+                        },
+                        "IsHistoricalDocumentForCapture": {
+                            "$id": "#root/updatedDocument/IsHistoricalDocumentForCapture",
+                            "title": "Ishistoricaldocumentforcapture",
+                            "type": "boolean",
+                            "examples": [
+                                False
+                            ],
+                            "default": True
+                        },
+                        "HasSystemAttachmentForCapture": {
+                            "$id": "#root/updatedDocument/HasSystemAttachmentForCapture",
+                            "title": "Hassystemattachmentforcapture",
+                            "type": "boolean",
+                            "examples": [
+                                False
+                            ],
+                            "default": True
+                        },
+                        "Suffix": {
+                            "$id": "#root/updatedDocument/Suffix",
+                            "title": "Suffix",
+                            "type": "null",
+                            "default": None
+                        }
+                    }
+                }
+                ,
+                "documentIdsToRemove": {
+                    "$id": "#root/documentIdsToRemove",
+                    "title": "Documentidstoremove",
+                    "type": "array",
+                    "default": []
+                }
+            }
+        }
+
+    def __before__(self):
+        self.run_dependencies(("re_capture_document_id", "re_capture_order_year", "re_capture_scanned",
+                               "re_capture_scan_date", "re_capture_azure_file_path", "re_capture_scan_task_id",
+                               "re_capture_recorded_year", "re_capture_doc_group", "re_capture_doc_type",
+                               "re_capture_doc_number", "cs_re_capture_order_number"))
+
+    def __test__(self):
+        self.now = self.datetime.now()
+        self.set_content_type('application/json')
+        self.response = self.session.post(self.get_url(self.api_urls.SaveDocumentItemDetails), json=self.post_data,
+                                          params=self.params)
+        assert self.response.status_code == 200, f"Actual response status: {self.response.status_code}"
+        self.validate(instance=self.response.json(), schema=self.schema)
+        self.set("re_capture_document_saved", True)
+
+
+if __name__ == '__main__':
+    run_test(__file__, browser="none")

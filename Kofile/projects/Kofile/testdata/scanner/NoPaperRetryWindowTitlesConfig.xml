@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<NoPaperRetryWindowTitlesConfig>
+  <Windows>
+    <Window>
+      <Title>TWAIN driver</Title>
+      <Buttons>
+        <Button>OK</Button>
+        <Button>&amp;Retry</Button>
+      </Buttons>
+    </Window>
+    <Window>
+      <Title>Microsoft .NET Framework</Title>
+      <Buttons>
+        <Button>&amp;Continue</Button>
+      </Buttons>
+    </Window>
+    <Window>
+      <Title>PaperStream IP</Title>
+      <Text>No paper on ADF paper chute or Hopper.</Text>
+      <Buttons>
+        <Button>&amp;Retry</Button>
+      </Buttons>
+    </Window>
+    <Window>
+      <Title>PaperStream IP</Title>
+      <Text>Paper jammed in the ADF.</Text>
+      <Buttons>
+        <Button>Cancel</Button>
+      </Buttons>
+    </Window>
+  </Windows>
+</NoPaperRetryWindowTitlesConfig>

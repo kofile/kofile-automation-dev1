@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WindowTitlesConfig>
+  <Windows>
+    <Window>
+      <Title>TWAIN driver</Title>
+      <Buttons>
+        <Button>OK</Button>        
+      </Buttons>
+    </Window>
+    <Window>
+      <Title>Microsoft .NET Framework</Title>
+      <Buttons>
+        <Button>&amp;Continue</Button>
+      </Buttons>
+    </Window>
+    <Window>
+      <Title>PaperStream IP</Title>
+      <Buttons>
+        <Button>OK</Button>        
+      </Buttons>
+    </Window>
+  </Windows>
+</WindowTitlesConfig>

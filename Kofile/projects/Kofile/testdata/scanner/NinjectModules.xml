@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<module name="NinjectBindings">
+
+  <!-- <bind
+   service="Kofile.Vanguard.ScanCommon.ScanManager.IScanManager, Kofile.Vanguard.ScanCommon, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+    to="Kofile.Vanguard.ScanCommon.ScanManager.AtalasoftScanManager, Kofile.Vanguard.ScanCommon, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"/> -->  
+
+ <bind
+    service="Kofile.Vanguard.ScanCommon.ScanManager.IScanManager, Kofile.Vanguard.ScanCommon, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+    to="Kofile.Vanguard.ScanCommon.ScanManager.PredefinedImageScanManager, Kofile.Vanguard.ScanCommon, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"/>
+
+</module>

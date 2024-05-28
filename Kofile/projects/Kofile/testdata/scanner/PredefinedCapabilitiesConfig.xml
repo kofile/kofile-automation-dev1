@@ -1,0 +1,29 @@
+﻿<CrsScannerCapabilities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ScannerSources>
+    <ScannerSource>Flatbed</ScannerSource>
+  </ScannerSources>
+  <PageSizes />
+  <ImageModes>
+    <PixelType>BlackWhite</PixelType>
+    <PixelType>GrayScale</PixelType>
+  </ImageModes>
+</CrsScannerCapabilities>
+
+<!-- SUPPORTED VALUES - DO NOT REMOVE
+<CrsScannerCapabilities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ScannerSources>
+    <ScannerSource>Flatbed</ScannerSource>
+    <ScannerSource>AutoDocumentFeeder</ScannerSource>
+  </ScannerSources>
+  <PageSizes>
+    <PageSize>Letter</PageSize>
+    <PageSize>Legal</PageSize>
+    <PageSize>USLedger</PageSize>
+  </PageSizes>
+  <ImageModes>
+    <PixelType>BlackWhite</PixelType>
+    <PixelType>GrayScale</PixelType>
+    <PixelType>MultiColor</PixelType>
+  </ImageModes>
+</CrsScannerCapabilities>
+-->
