@@ -46,3 +46,4 @@ psutil
 bs4
 PyMuPDF
 pymysql
+waitress
